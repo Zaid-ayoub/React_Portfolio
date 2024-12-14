@@ -1,0 +1,561 @@
+/* General Reset and Font Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+p {
+
+  text-align: center;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: -100px;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.nav-items {
+  color: #fff;
+  margin: 0 15px;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-items:hover {
+  color: #f39c12;
+}
+
+.nav-left img {
+  width: 40px;
+  height: auto;
+  margin-right: 15px; /* Space between the logo and the menu */
+}
+
+.nav-right img {
+  width: 24px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.nav-right img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center; /* Center the text for better alignment */
+  }
+  
+  .nav-items {
+    margin: 10px 0; /* Adjust margin for stacked items */
+    font-size: 18px;
+    display: inline-block; /* Prevent the items from taking full width */
+  }
+
+  .nav-items:not(:last-child) {
+    margin-right: 20px; /* Add space between navigation items */
+  }
+
+  .nav-left img,
+  .nav-right img {
+    width: 30px; /* Adjust image size for smaller screens */
+    margin-bottom: 10px; /* Add space between logo and navigation icons */
+  }
+
+  .nav-right {
+    margin-top: 10px; /* Add space above the navigation icons */
+  }
+}
+
+/* Main Section */
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-left,
+.main-right {
+  width: 50%;
+  padding: 20px;
+}
+
+.main-right h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.main-right h1 span {
+  color: #f39c12;
+}
+
+#fourth {
+  font-size: 1.5rem;
+  color: #777;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column; /* Stack the sections vertically */
+    text-align: center; /* Center content for smaller screens */
+  }
+
+  .main-left,
+  .main-right {
+    width: 100%; /* Take full width for mobile */
+    padding: 15px 0; /* Reduce padding */
+  }
+
+  .main-right h1 {
+    font-size: 2.5rem; /* Adjust font size for better readability */
+  }
+
+  #fourth {
+    font-size: 1.2rem; /* Adjust font size */
+  }
+}
+/* About Me Section */
+#About-me {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* About Me Container */
+.about-me-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+/* Left section of About Me */
+.about-left {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+/* Right section of About Me */
+.about-right {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+/* Heading for About Me */
+.about-left h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4C4C4C;
+  margin-bottom: 20px;
+}
+
+/* Paragraph inside About Me */
+.about-right p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+/* Responsive Design for small screens */
+@media (max-width: 768px) {
+  .about-me-container {
+      flex-direction: column;
+      text-align: center;
+  }
+  .about-left {
+      flex: none;
+      width: 100%;
+      padding: 0px 0;
+      margin-top: 0px;
+  }
+  .about-right {
+      flex: none;
+      width: 100%;
+      padding: 0px 0;
+  }
+}
+
+/* Section Header Styling */
+.section-header {
+  text-align: center;
+  font-size: 2rem;
+  color: #f39c12;
+  margin-top: 100px;
+}
+
+/* Services Section */
+#Services {
+  font-size: 2rem;
+  color: #f39c12;
+  margin-top: 100px;
+}
+
+/* Apply the same header styling for all sections */
+.section-header h2,
+.skills-title, h2
+{
+  text-align: center;
+  font-size: 2rem;
+  color: #f39c12;
+  margin-top: opx;
+}
+
+/* Services Section */
+#Services {
+  text-align: center;
+  font-size: 2rem;
+  color: #f39c12;
+  margin-top: 100px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 0 30px; /* Add padding to the left and right of the container */
+}
+
+.card {
+  background-color: #fff;
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-content ul {
+  list-style: none;
+}
+
+.card-content ul li {
+  margin-bottom: 8px;
+  color: #555;
+}
+/* Responsive Design for small screens */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-me-container {
+    flex-direction: column;
+  }
+
+  .card-container,
+  .skills-container,
+  .card-container2 {
+   
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto; /* Center the containers */
+      padding: 0 30px; /* Add padding to the left and right of the container */
+      max-width: 1200px; /* Ensure the containers don't stretch too much */
+      width: 100%; /* Make sure it's responsive */
+    
+  }
+
+  .card,
+  .skills-card,
+  .card-2 {
+    width: 80%; /* Take 80% of the width */
+    margin: 10px auto; /* Add margin on the left and right */
+    margin-bottom: 20px; /* Add space between the cards */
+  }
+
+  .buttons {
+    width: auto;
+    margin: 0 auto;
+  }
+}
+
+
+/* Skills Section */
+#Skills {
+  text-align: center;
+  font-size: 2rem;
+  color: #f39c12;
+  margin-top: 100px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 0 30px; /* Add padding to the left and right of the container */
+
+}
+
+.skills-card {
+  background-color: #fff;
+  width: 45%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.skills-card:hover {
+  transform: translateY(-10px);
+}
+
+.skills-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.card-left {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card-right ul {
+  list-style: none;
+}
+
+.card-right ul li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Projects Section */
+#Projects {
+  text-align: center;
+  font-size: 2rem;
+  color: #f39c12;
+  margin-top: 100px;
+}
+
+.card-container2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 0 30px; /* Add padding to the left and right of the container */
+
+}
+
+.card-2 {
+  background-color: #fff;
+  width: 45%;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card-2:hover {
+  transform: translateY(-10px);
+}
+
+.card-image2 {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  background-color: #f39c12;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  display: block;
+  margin-top: 15px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.buttons:hover {
+  background-color: #e67e22;
+}
+
+.git-img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping of items */
+}
+
+.footer-items {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer-items:hover {
+  color: #f39c12;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack footer items vertically */
+    text-align: center; /* Center text */
+  }
+
+  .footer-items {
+    margin: 10px 0; /* Adjust margin for stacked items */
+    font-size: 18px; /* Adjust font size */
+  }
+}
+/* Footer Image */
+footer img {
+  width: 100%;
+  max-width: 40px; /* Ensure the image doesn't grow too large */
+  height: auto;
+  transition: transform 0.3s;
+}
+
+footer img:hover {
+  transform: scale(1.1);
+}
+
+/* Main Section Image */
+.main-left img, .main-right img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+/* For smaller screens, you can adjust the size further */
+@media screen and (max-width: 768px) {
+  .main-left img, .main-right img {
+    max-width: 80%; /* Limit the image width to 80% on smaller screens */
+  }
+}
+
+/* For smaller screens, the image should be smaller */
+@media screen and (max-width: 768px) {
+  footer img {
+    max-width: 30px; /* Reduce size for smaller screens */
+  }
+}
+
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  .main-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .about-me-container {
+      flex-direction: column;
+  }
+
+  .card-container,
+  .skills-container,
+  .card-container2 {
+      flex-direction: column;
+  }
+
+  .card, .skills-card, .card-2 {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .buttons {
+      width: auto;
+      margin: 0 auto;
+  }
+}
+.window-size {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ff5722; /* Bright orange for better visibility */
+  font-weight: bold; /* Makes the text stand out */
+}
